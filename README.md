@@ -1,7 +1,3 @@
-# Chat History Database - Streamlit App
-
-This is a Streamlit web application for retrieving and analyzing chat history data from AWS S3.
-
 ## Project Structure
 
 ```
@@ -12,16 +8,6 @@ chatbot_database/
 └── README.md             # This file
 ```
 
-## Features
-
-- Retrieve chat history from S3 by date range
-- Filter by user ID
-- Display statistics and analytics
-- Mode detection (education vs consultation)
-- Topic extraction for education mode conversations
-- Word cloud visualization
-- Export data to JSON
-
 ## Setup for Streamlit Cloud
 
 ### 1. Environment Variables
@@ -29,15 +15,13 @@ chatbot_database/
 Set the following environment variables in Streamlit Cloud:
 
 **Required:**
+
 - `AWS_ACCESS_KEY_ID`: Your AWS access key
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret key
 - `AWS_DEFAULT_REGION`: AWS region (e.g., `us-east-1`)
 - `APP_PASSWORD`: Password to access the application (set a strong password!)
 
-**Optional:**
-- `HTTPS_PROXY`: Proxy URL if needed
-
-**Note:** For Streamlit Cloud, you can also set `APP_PASSWORD` in the Secrets section (`.streamlit/secrets.toml`) instead of environment variables. 
+**Note:** For Streamlit Cloud, you can also set `APP_PASSWORD` in the Secrets section (`.streamlit/secrets.toml`) instead of environment variables.
 
 ### 2. Deploy to Streamlit Cloud
 
@@ -83,12 +67,3 @@ Default S3 settings (can be modified in `local_database.py`):
 
 - Bucket: `chatbot-content-storage`
 - Path: `chat_history_library`
-
-## Dependencies
-
-- `streamlit`: Web framework
-- `boto3`: AWS SDK
-- `pandas`: Data processing
-- `wordcloud`: Word cloud visualization (optional)
-- `matplotlib`: Plotting (optional)
-
